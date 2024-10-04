@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business
+        Incubation</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+
+     <!-- Loader -->
+     <div id="loader"></div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="newlogoclient.png" alt="Company Logo">
+            </div>
+            <nav id="navbar-items" class="nav-items">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="cont">
+            <div class="text">
+                START YOUR JOURNEY
+                <h1>Call to Action: Enroll<br/> in Our Incubation Courses</h1>
+                <p>Unlock your entrepreneurial potential today by enrolling in our <br/> transformative 24 to 36-month business incubation courses.<br/> Seize this opportunity to turn your ideas into successful ventures!</p>
+               
+    
+                <!-- Form Section with Validations -->
+                <div class="form-container">
+                    <h2>Register Your Interest</h2>
+                    <form id="interestForm" action="#" method="POST" onsubmit="return validateForm()">
+                        <!-- Name field with required validation -->
+                        <input type="text" id="name" name="name" placeholder="Your Name" required minlength="3">
+                        <!-- Email field with email validation -->
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <!-- Phone number with pattern validation (10 digits only) -->
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" required>
+                        <!-- Message text area with a minimum of 10 characters -->
+                        <textarea id="message" name="message" placeholder="Your Message" rows="4" minlength="10" required></textarea>
+                        <button type="submit">Submit</button> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="newlogoclient.png" alt="Company Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 inabate. All Rights Reserved.</p>
+        </div>
+    </footer>
+  
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript for loader and form validation -->
+    <script>
+        // Show loader for 1 second and then hide it
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById("loader").style.display = "none";
+                document.body.classList.add('loaded');
+            }, 1000); // 1000 milliseconds = 1 second
+        };
+
+        // Hamburger menu toggle function
+        function toggleMenu() {
+            var x = document.getElementById("navbar-items");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        // Form validation function
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var message = document.getElementById("message").value;
+
+            // Validate name (at least 3 characters)
+            if (name.length < 3) {
+                alert("Name must be at least 3 characters long.");
+                return false;
+            }
+
+            // Validate email format using regex
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Validate phone number (10 digits)
+            if (phone.length !== 10 || !/^\d{10}$/.test(phone)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+
+            // Validate message (at least 10 characters)
+            if (message.length < 10) {
+                alert("Message must be at least 10 characters long.");
+                return false;
+            }
+
+            // If all validations pass
+            return true;
+        }
+    </script>
+
+</body>
+</html>

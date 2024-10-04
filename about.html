@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business
+        Incubation</title>
+    <link rel="stylesheet" href="aboutStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+     <!-- Loader -->
+     <div id="loader"></div>
+
+    <!-- Placeholder where the common header will be injected -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="newlogoclient.png" alt="Company Logo">
+            </div>
+            <nav id="navbar-items" class="nav-items">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+
+       <!-- First Section with Background Image and Overlaid Text -->
+<div class="background-section">
+    <!-- Main Text Content Over Image -->
+    <div class="text-content">
+      <p class="main-heading">BUSINESS STRATEGIES, MARKET POTENTIAL</p>
+      <h2>Enhancing Market Potential</h2>
+      <p class="sub-heading">Implementing effective business strategies to maximize market potential and success.</p>
+    </div>
+  
+    <!-- Transparent Side Boxes -->
+    <div class="side-boxes">
+      <div class="box">Product Development and Innovation</div>
+      <div class="box">Market Segmentation and Targeting</div>
+    </div>
+  </div>
+
+<div class="section-wrapper">
+        <div class="second_section">
+            <div class="inside_section">
+                <div class="img">
+                    <p>SUSTAINABILITY PRACTICES</p>
+                    <h2>Sustainability in Business</h2>
+                    <p>Building a sustainable business for long-term success</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="box-container">
+            <div class="box1">
+                <div>
+                    <img src="1st1.png" alt="" />
+                    <h4>Sustainable Business Practices</h4>
+                    <p>Implement environmentally friendly and socially responsible practices to reduce the business's impact on the environment and society</p>
+                </div>
+            </div>
+            <div class="box2">
+                <div>
+                    <img src="2nd.png" alt="" />
+                    <h4>Measuring and improving sustainability</h4>
+                    <p>Use key performance indicators to assess sustainability efforts and continuously improve processes for long-term viability</p>
+                </div>
+            </div>
+            <div class="box3">
+                <div>
+                    <img src="3rd.png" alt="" />
+                    <h4>Case Studies of Sustainable Business</h4>
+                    <p>Implement environmentally friendly and socially responsible practices to reduce the business's impact on the environment and society</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+<!-- Combined Section with Image on Right, Text on Left, and Points Below -->
+<div class="incubation-section">
+    <!-- Left side content -->
+    <div class="content">
+        <h3>BUSINESS INCUBATION INSIGHTS</h3>
+        <h1>Summary and Key Takeaways</h1>
+        <p>
+            Recap of the essential points covered in the presentation for empowering
+            student and entrepreneur success through business incubation.
+        </p>
+
+        <!-- Points (directly after the text) -->
+        <div class="points">
+            <div class="point">
+                <img src="first.png" alt="Benefits of Business Incubation" />
+                <div class="point-text">
+                    <h4>Benefits of Business Incubation</h4>
+                    <p>
+                        Business incubation offers a supportive ecosystem that nurtures innovation,
+                        provides access to resources, mentorship, and networking opportunities.
+                    </p>
+                </div>
+            </div>
+
+            <div class="point">
+                <img src="second.png" alt="Incubation Process" />
+                <div class="point-text">
+                    <h4>Essential Components of the Incubation Process</h4>
+                    <p>
+                        The incubation process includes idea validation, business planning, funding
+                        strategies, marketing techniques, and sustainable scaling methods.
+                    </p>
+                </div>
+            </div>
+
+            <div class="point">
+                <img src="third.png" alt="Encouragement" />
+                <div class="point-text">
+                    <h4>Encouragement To Take The Next Step</h4>
+                    <p>
+                        Inspire action by encouraging students and entrepreneurs to leverage the
+                        comprehensive support, resources, and mentorship provided to turn their ideas
+                        into successful businesses.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right side image -->
+    <div class="image-container">
+        <img src="thirdAboutImage.jpg" 
+             alt="Business Incubation" />
+    </div>
+</div>
+
+
+
+    </main>
+
+
+
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="newlogoclient.png" alt="Company Logo">
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html"> Home</a></li>
+          <li><a href="about.html"> About</a></li>
+          <li><a href="services.html"> Services</a></li>
+          <li><a href="contact.html"> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 inabate. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Include Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+
+    <script>
+
+        // Show loader for 1 second and then hide it
+
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById("loader").style.display = "none";
+                document.body.classList.add('loaded');
+            }, 1000); // 1000 milliseconds = 1 second
+        };
+
+
+        // Function to load the common header from header.html
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     fetch('header.html')
+        //     .then(response => response.text())
+        //     .then(data => {
+        //         document.getElementById("common-header").innerHTML = data;
+        //     });
+        // });
+
+        // Toggle function for hamburger menu
+        function toggleMenu() {
+            var x = document.getElementById("navbar-items");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business
+        Incubation</title>
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+ <!-- Loader -->
+ <div id="loader"></div>
+
+    <!-- Placeholder where the common header will be injected -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="newlogoclient.png" alt="Company Logo">
+            </div>
+            <nav id="navbar-items" class="nav-items">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+      <div class="backgroundcolour">
+      <div>  <h1>Our Services</h1></div> 
+
+        <div class="big-box">
+            <div class="box box1">
+                <div class="data1">
+                    <h2>Access to Industry Experts and Mentors</h2>
+                    <p>Guidance from experienced professionals to provide insights and advice for business growth and development.</p>
+                    <button>Discover More</button>
+                </div>
+            </div>
+            <div class="box box2">
+                <div class="data1">
+                    <h2>Diverse Resources for Market Research & Legal Support</h2>
+                    <p>Access to various resources for market research, legal support, and other essential aspects of business operations.</p>
+                    <button>Discover More</button>
+                </div>
+            </div>
+            <div class="box box3">
+                <div class="data1">
+                    <h2>Collaboration Opportunities</h2>
+                    <p>Connect with like-minded individuals for collaboration, support, and potential partnerships.</p>
+                    <button>Discover More</button>
+    
+                </div>
+            </div>
+            <div class="box box4">
+                <div class="data1">
+                    <h2>Networking and Community Events</h2>
+                    <p>Facilitating networking opportunities and community events to foster collaboration and knowledge sharing among startups.</p>
+                    <button>Discover More</button>
+    
+                </div>
+            </div>
+            <div class="box box5">
+                <div class="data1">
+                    <h2>Personalized Mentorship</h2>
+                    <p>Personalized mentorship to guide startups in strategic decision-making and business development.</p>
+                    <button>Discover More</button>
+    
+                </div>
+            </div>
+            <div class="box box6">
+                <div class="data1">
+                    <h2>Business Planning Session</h2>
+                    <p>Comprehensive training on creating solid and effective business plans.</p>
+                    <button>Discover More</button>
+    
+                </div>
+            </div>
+        </div>
+
+
+    </div>  
+    </main>
+
+
+
+
+    
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="newlogoclient.png" alt="Company Logo">
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 inabate. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Include Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+
+
+// Show loader for 1 second and then hide it
+window.onload = function() {
+            setTimeout(function() {
+                document.getElementById("loader").style.display = "none";
+                document.body.classList.add('loaded');
+            }, 1000); // 1000 milliseconds = 1 second
+        };
+
+        // Function to load the common header from header.html
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     fetch('header.html')
+        //     .then(response => response.text())
+        //     .then(data => {
+        //         document.getElementById("common-header").innerHTML = data;
+        //     });
+        // });
+
+        // Toggle function for hamburger menu
+        function toggleMenu() {
+            var x = document.getElementById("navbar-items");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
